@@ -29,3 +29,20 @@ hist(x, breaks=0)
 hist(x, breaks=3)
 hist(x, breaks=12)
 hist(x, breaks=50)
+
+## March 28 we will update our function to prevent user from being stupid
+
+plotRandom(n=-20)
+plotRandom(n=43.5234)
+plotRandom(n=-43.432)
+plotRandom(n="thirty")
+## n should be a positive integer "natural numbers"
+
+## to test out what it is doing...
+x <- rnorm(n=43.5234)
+length(x)
+## so it appears to be truncating
+##two things
+## 1. prevent the user from specifying a negative number
+## 2. if the user specifies a positive real number, we should
+## tell them what value is actually being used
